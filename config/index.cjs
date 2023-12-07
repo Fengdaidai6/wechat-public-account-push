@@ -1,1 +1,67 @@
-{"APP_ID":"wx43371988f730c229","APP_SECRET":"22320cfa18d08720c9c1b8b9a05f3999","IS_SHOW_COLOR":true,"CALLBACK_TEMPLATE_ID":"Ji-WJvXlP4QwDJpE6xsrWyxqkPtnjTH7ikScW7jl49k","CALLBACK_USERS":[{"name":"自己","id":"ohT8t65scPPqdEwb2wKF7pz3m8UY"}],"USERS":[{"name":"阿云宝贝","id":"ohT8t65scPPqdEwb2wKF7pz3m8UY","useTemplateId":"ohT8t65scPPqdEwb2wKF7pz3m8UY","province":"湖南","city":"长沙","horoscopeDate":"03-22","horoscopeDateType":"今日","openUrl":"www.baidu.com","festivals":[{"type":"*生日","name":"阿云宝贝","date":"03-14","year":"2024"}],"customizedDateList":[]},{"name":"阿云宝贝","id":"ohT8t65scPPqdEwb2wKF7pz3m8UY","useTemplateId":"ky0nIJoxEas4FMFqSCo369v8Z2Wi-sfzkSHojEjB8TM","province":"湖南","city":"长沙","horoscopeDate":"03-22","horoscopeDateType":"今年","openUrl":"https://www.baidu.com/","festivals":[{"type":"*生日","name":"阿云宝贝的生日","date":"03-14","year":"2024"},{"type":"节日","name":"第一次见面","date":"09-05","year":"2023"},{"type":"节日","name":"在一起","date":"10-05","year":"2023"}],"customizedDateList":[{"keyword":"在一起","date":"2023-12-01"},{"keyword":"第一次见面","date":"2023-11-30"},{"keyword":"相识","date":"2023-09-05"}]}],"SWITCH":{"weather":true,"holidaytts":false,"CIBA":false,"oneTalk":false,"earthyLoveWords":true,"momentCopyrighting":false,"poisonChickenSoup":false,"poetry":true,"horoscope":false,"birthdayMessage":true}}
+/* eslint-disable */
+
+/**
+ * 此项目配置为方便新人使用，已缩减至最简配置。
+ * 如若想使用更多功能，请查考文档中的 【3. config参数说明】 
+ * 自行添加属性，以支持更多个性化功能
+ */
+const USER_CONFIG = {
+
+  // 使用微信测试号：公众号APP_ID
+  APP_ID: 'wx43371988f730c229',
+
+  // 使用微信测试号：公众号APP_SECRET
+  APP_SECRET: '22320cfa18d08720c9c1b8b9a05f3999',
+
+  PROVINCE: '湖南',
+  CITY: '长沙',
+
+  USERS: [
+    {
+      // 想要发送的人的名字
+      name: '阿云宝贝',
+      // 使用微信测试号：扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
+      id: 'ohT8t65scPPqdEwb2wKF7pz3m8UY',
+      // 使用微信测试号：你想对他发送的模板消息的模板ID
+      useTemplateId: 'XD2MblahLe85XU3jIUiI2BLPo1KynjTRgsZhfaxAG_s',
+      // 新历生日, 仅用作获取星座运势, 格式必须为MM-DD
+      horoscopeDate: '03-22',
+      festivals: [
+        // 注意：此条配置日期为阴历日期，因为`type`中 “生日” 之前有 * 符号
+        {
+          type: '*生日', name: '阿云宝贝', year: '1999', date: '02-05',
+        },
+        // 注意：此条配置日期为阳历日期，因为`type`中 “生日” 之前没有 * 符号
+        {
+          type: '生日', name: '阿云宝贝', year: '1999', date: '03-22',
+        },
+        {
+          type: '节日', name: '相识纪念日', year: '2023', date: '09-05',
+        },
+      ],
+      // 我们在一起已经有xxxx天了的配置
+      customizedDateList: [
+        // 在一起的日子
+        { keyword: 'love_day', date: '2023-12-01' },
+        // 结婚纪念日
+        { keyword: 'marry_day', date: '2022-09-09' },
+      ],
+    },
+  ],
+
+
+  // 【推送完成提醒】模板id, 用来看自己有没有发送成功的那个模板
+  CALLBACK_TEMPLATE_ID: 'Ji-WJvXlP4QwDJpE6xsrWyxqkPtnjTH7ikScW7jl49k',
+
+  CALLBACK_USERS: [
+    {
+      name: '自己',
+      // 使用微信测试号：自己的微信id，扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
+      id: 'ohT8t65scPPqdEwb2wKF7pz3m8UY',
+    }
+  ],
+
+}
+
+module.exports = USER_CONFIG
+
